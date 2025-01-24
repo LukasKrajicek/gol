@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game of Life</title>
+
+  </head>
+  <body>
+    <h1>Game of Life</h1>
+    <div id="gridContainer"></div>
+
+    <div class="controls">
+      <div>
+        <button id="start">Start</button>
+        <button id="clear">Clear</button>
+        <button id="random">Random</button>
+        <button id="undo">Go Back</button>
+      </div>
+      <div>
+        <p>Generation: <span id="generation">0</span> //  Number of cells: <span id="livingCells">0</span></p>
+      </div>
+    </div>
+
+    <p class="toggle-settings" onclick="toggleSettings()">Show Settings</p>
+
+    <div class="settings">
+      <h2>Settings</h2>
+      <div>
+        <strong><p>Select Cell Size:</p></strong>
+        <label><input type="radio" name="cellSize" value="small" /> Small</label>
+        <label><input type="radio" name="cellSize" value="medium" /> Medium</label>
+        <label><input type="radio" name="cellSize" value="large" checked /> Large</label>
+      </div>
+      <div>
+        <strong><p>Rules:</p></strong>
+        <label><input type="checkbox" id="rule1" checked /> Rule 1: Alive cells with 2 or 3 neighbors survive</label>
+        <label><input type="checkbox" id="rule2" checked /> Rule 2: Dead cells with 3 neighbors come to life</label>
+        <label><input type="checkbox" id="rule3" /> Rule 3: Dead cells with 6 neighbors come to life (Highlife)</label>
+      </div>
+      <div>
+        <strong><p>Appearance:</p></strong>
+        <label><input type="checkbox" id="darkMode" /> Enable Dark Mode</label>
+      </div>
+      <div>
+        <strong><p>Cell Appearance:</p></strong>
+        <label for="cellColor">Live Cell Color:</label>
+        <input type="color" id="cellColor" value="#4caf50" />
+      </div>
+    </div>
+
+<script src="script.js"></script>
+
+  </body>
+</html>
