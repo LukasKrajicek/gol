@@ -1,0 +1,195 @@
+      /* Obecné styly */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: #f0f8ff;
+        color: #333;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 10px;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      body.dark {
+        background-color: #1e1e1e;
+        color: #ddd;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        #gridContainer {
+          margin: 0 auto;
+        }
+
+        table {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        td {
+          width: 10px;
+          height: 10px;
+        }
+
+        .controls button {
+          padding: 4px 16px;
+          font-size: 14px;
+          width: 75%;
+        }
+
+        .toggle-settings {
+          font-size: 14px;
+        }
+
+        .settings {
+          max-width: 100%;
+          padding: 10px;
+          font-size: 14px;
+        }
+
+        .settings label {
+          font-size: 12px;
+        }
+
+        #gridContainer {
+          margin-bottom: 20px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      #gridContainer {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid #ccc;
+        background-color: #f4f4f4;
+        text-align: center;
+        font-size: 12px;
+        transition: background-color 0.3s;
+      }
+
+      td.live {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      td.dead {
+        background-color: #f4f4f4;
+        color: transparent;
+      }
+
+      body.dark td {
+        border-color: #555;
+      }
+
+      body.dark td.live {
+        background-color: #81c784;
+      }
+
+      body.dark td.dead {
+        background-color: #333;
+      }
+
+      table.small td {
+        width: 10px;
+        height: 10px;
+      }
+
+      table.medium td {
+        width: 20px;
+        height: 20px;
+      }
+
+      table.large td {
+        width: 30px;
+        height: 30px;
+      }
+
+      .settings {
+        margin: 20px auto;
+        padding: 10px;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        display: none;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      body.dark .settings {
+        background-color: #2c2c2c;
+        border-color: #555;
+      }
+
+      .settings h2 {
+        margin-top: 0;
+      }
+
+      .settings label {
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+      }
+
+      .controls {
+        margin: 20px 0;
+      }
+
+      .controls button {
+        margin: 0 5px;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      #start {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      #clear {
+        background-color: #f44336;
+        color: white;
+      }
+
+      #random {
+        background-color: #ff9800;
+        color: white;
+      }
+      
+      #undo {
+        background-color: blue;
+        color: white;
+      }
+
+      .controls button:hover {
+        background-color: #ddd;
+        transform: scale(1.1);
+      }
+
+      .toggle-settings {
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
